@@ -59,7 +59,7 @@ namespace GetSummonerNames
             this.button1.TabIndex = 0;
             this.button1.Text = "GET NAMES";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -73,7 +73,7 @@ namespace GetSummonerNames
             this.button2.TabIndex = 2;
             this.button2.Text = "U.GG";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
@@ -86,7 +86,7 @@ namespace GetSummonerNames
             this.button3.TabIndex = 3;
             this.button3.Text = "DODGE";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label1
             // 
@@ -115,7 +115,7 @@ namespace GetSummonerNames
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "PLAYER 1";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -132,7 +132,7 @@ namespace GetSummonerNames
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "PLAYER 2";
             this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -149,7 +149,7 @@ namespace GetSummonerNames
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "PLAYER 3";
             this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -166,7 +166,7 @@ namespace GetSummonerNames
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "PLAYER 4";
             this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -183,7 +183,7 @@ namespace GetSummonerNames
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "PLAYER 5";
             this.linkLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // button4
             // 
@@ -196,7 +196,7 @@ namespace GetSummonerNames
             this.button4.TabIndex = 10;
             this.button4.Text = "MINIMIZE";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button5
             // 
@@ -209,7 +209,7 @@ namespace GetSummonerNames
             this.button5.TabIndex = 11;
             this.button5.Text = "CLOSE";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // Form1
             // 
