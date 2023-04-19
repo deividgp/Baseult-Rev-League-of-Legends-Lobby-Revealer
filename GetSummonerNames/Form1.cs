@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using GetSummonerNames.Properties;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace GetSummonerNames
 {
@@ -20,11 +21,10 @@ namespace GetSummonerNames
         private const int HtCaption = 0x2;
 
         private readonly List<LinkLabel> LinkLabels;
-        private readonly List<Player> Players = new List<Player>();
+        private List<Player> Players = new List<Player>();
         private Tuple<int, string> Riot;
         private Tuple<int, string> Client;
-        private string _myregion;
-        private string _uggplayers;
+        private string UggMultisearch;
 
         [DllImport("user32.dll")]
         private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
@@ -73,16 +73,14 @@ namespace GetSummonerNames
             label1.Text = "Connecting to LCU...";
             GetLcu();
             label1.Text = "Searching for Players...";
-            // Public Riot API request
-            _myregion = GetRegion(MakeRequest("GET", "/riotclient/get_region_locale", true));
             // Found Request in various Logs C:\Riot Games\League of Legends\Logs\LeagueClient
-            GetPlayers(MakeRequest("GET", "/chat/v5/participants/champ-select", false));
+            GetData(MakeRequest("GET", "/chat/v5/participants/champ-select", false));
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             label1.Text = "Opening U.GG...";
-            Process.Start("https://u.gg/multisearch?summoners=" + _uggplayers + "&region=" + _myregion.ToLower() + "1");
+            Process.Start(UggMultisearch);
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -149,25 +147,20 @@ namespace GetSummonerNames
                 Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1").GetBytes("riot:" + GetString(commandline, "--remoting-auth-token=", "\" \"--respawn-command=LeagueClient.exe"))));
         }
 
-        private string GetRegion(string requeqst)
-        {
-            return JsonConvert.DeserializeObject<PlayerRegion>(requeqst).Region;
-        }
-
-        private void GetPlayers(string req)
+        private void GetData(string req)
         {
             Players.Clear();
-            _uggplayers = "";
-            PlayersAux deserialized = JsonConvert.DeserializeObject<PlayersAux>(req);
 
-            foreach (PlayerAux player in deserialized.Participants)
+            string uggPlayers = string.Empty;
+            string region = (string)JObject.Parse(MakeRequest("GET", "/riotclient/get_region_locale", true))["region"];
+
+            JArray array = (JArray)JObject.Parse(req)["participants"];
+            Players = array.ToObject<List<Player>>();
+
+            foreach (Player player in Players)
             {
-                Players.Add(new Player()
-                {
-                    Name = player.Name,
-                    MobalyticsLink = Mobalytics + _myregion + "/" + player.Name + "/overview"
-                });
-                _uggplayers += player.Name + ", ";
+                player.MobalyticsLink = Mobalytics + region + "/" + player.Name + "/overview";
+                uggPlayers += player.Name + ", ";
             }
 
             if (!Players.Any())
@@ -175,8 +168,11 @@ namespace GetSummonerNames
                 label1.Text = "No Players found...";
                 BackgroundImage = Resources.off;
                 button2.Enabled = false;
+                Resetlabel();
                 return;
             }
+            
+            UggMultisearch = "https://u.gg/multisearch?summoners=" + uggPlayers + "&region=" + region.ToLower() + "1";
 
             label1.Text = "Found Players in Lobby...";
             BackgroundImage = Resources.on;
@@ -239,21 +235,6 @@ namespace GetSummonerNames
                 LinkLabels[i].Text = "PLAYER " + (i+1);
                 LinkLabels[i].Enabled = false;
             }
-        }
-
-        public class PlayerRegion
-        {
-            public string Region { get; set; }
-        }
-
-        public class PlayerAux
-        {
-            public string Name { get; set; }
-        }
-
-        public class PlayersAux
-        {
-            public List<PlayerAux> Participants { get; set; }
         }
 
         public class Player
