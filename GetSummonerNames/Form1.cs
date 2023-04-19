@@ -21,7 +21,7 @@ namespace GetSummonerNames
         private const int HtCaption = 0x2;
 
         private readonly List<LinkLabel> LinkLabels;
-        private List<Player> Players = new List<Player>();
+        private List<Player> Players = new();
         private Tuple<int, string> Riot;
         private Tuple<int, string> Client;
         private string UggMultisearch;
@@ -55,7 +55,7 @@ namespace GetSummonerNames
                 "Baseult-Rev Information!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.Yes)
             {
-                Process.Start("https://www.unknowncheats.me/forum/league-of-legends/523020-ranked-12-22-reveal-teammates-lobby.html");
+                Process.Start(new ProcessStartInfo("https://www.unknowncheats.me/forum/league-of-legends/523020-ranked-12-22-reveal-teammates-lobby.html") { UseShellExecute = true });
             }
 
             Text = string.Empty;
@@ -65,7 +65,7 @@ namespace GetSummonerNames
         {
             if (!Players.Any()) return;
 
-            Process.Start(Players[LinkLabels.IndexOf((LinkLabel)sender)].MobalyticsLink);
+            Process.Start(new ProcessStartInfo(Players[LinkLabels.IndexOf((LinkLabel)sender)].MobalyticsLink) { UseShellExecute = true });
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace GetSummonerNames
         private void Button2_Click(object sender, EventArgs e)
         {
             label1.Text = "Opening U.GG...";
-            Process.Start(UggMultisearch);
+            Process.Start(new ProcessStartInfo(UggMultisearch) { UseShellExecute = true });
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace GetSummonerNames
             Close();
         }
 
-        private string Cmd(string gamename)
+        private static string Cmd(string gamename)
         {
             string commandline = "";
             var mngmtClass = new ManagementClass("Win32_Process");
@@ -128,7 +128,7 @@ namespace GetSummonerNames
             return commandline;
         }
 
-        private string GetString(string text, string from, string to)
+        private static string GetString(string text, string from, string to)
         {
             int pFrom = text.IndexOf(from, StringComparison.Ordinal) + from.Length;
             int pTo = text.LastIndexOf(to, StringComparison.Ordinal);
@@ -171,7 +171,7 @@ namespace GetSummonerNames
                 Resetlabel();
                 return;
             }
-            
+
             UggMultisearch = "https://u.gg/multisearch?summoners=" + uggPlayers + "&region=" + region.ToLower() + "1";
 
             label1.Text = "Found Players in Lobby...";
@@ -198,7 +198,7 @@ namespace GetSummonerNames
                 int port;
                 string token;
 
-                if(isClient)
+                if (isClient)
                 {
                     port = Client.Item1;
                     token = Client.Item2;
@@ -216,10 +216,8 @@ namespace GetSummonerNames
                 request.Headers.Add("Authorization", "Basic " + token);
 
                 var httpResponse = (HttpWebResponse)request.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    return streamReader.ReadToEnd();
-                }
+                using var streamReader = new StreamReader(httpResponse.GetResponseStream());
+                return streamReader.ReadToEnd();
             }
             catch
             {

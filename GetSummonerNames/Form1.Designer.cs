@@ -34,210 +34,209 @@ namespace GetSummonerNames
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(Form1));
+            button1=new Button();
+            button2=new Button();
+            button3=new Button();
+            label1=new Label();
+            linkLabel1=new LinkLabel();
+            linkLabel2=new LinkLabel();
+            linkLabel3=new LinkLabel();
+            linkLabel4=new LinkLabel();
+            linkLabel5=new LinkLabel();
+            button4=new Button();
+            button5=new Button();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(20, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "GET NAMES";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            button1.BackColor=Color.FromArgb(65, 65, 65);
+            button1.FlatStyle=FlatStyle.Flat;
+            button1.ForeColor=Color.Lime;
+            button1.Location=new Point(20, 82);
+            button1.Name="button1";
+            button1.Size=new Size(109, 28);
+            button1.TabIndex=0;
+            button1.Text="GET NAMES";
+            button1.UseVisualStyleBackColor=false;
+            button1.Click+=Button1_Click;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.button2.Enabled = false;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Cyan;
-            this.button2.Location = new System.Drawing.Point(146, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "U.GG";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            button2.BackColor=Color.FromArgb(65, 65, 65);
+            button2.Enabled=false;
+            button2.FlatStyle=FlatStyle.Flat;
+            button2.ForeColor=Color.Cyan;
+            button2.Location=new Point(146, 82);
+            button2.Name="button2";
+            button2.Size=new Size(109, 28);
+            button2.TabIndex=2;
+            button2.Text="U.GG";
+            button2.UseVisualStyleBackColor=false;
+            button2.Click+=Button2_Click;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(272, 82);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 28);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "DODGE";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            button3.BackColor=Color.FromArgb(65, 65, 65);
+            button3.FlatStyle=FlatStyle.Flat;
+            button3.ForeColor=Color.Red;
+            button3.Location=new Point(272, 82);
+            button3.Name="button3";
+            button3.Size=new Size(109, 28);
+            button3.TabIndex=3;
+            button3.Text="DODGE";
+            button3.UseVisualStyleBackColor=false;
+            button3.Click+=Button3_Click;
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(21, 122);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(360, 27);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Join a Lobby and click on \"Get Names\"...";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.BackColor=Color.FromArgb(35, 35, 35);
+            label1.BorderStyle=BorderStyle.FixedSingle;
+            label1.ForeColor=Color.Lime;
+            label1.Location=new Point(21, 122);
+            label1.Name="label1";
+            label1.Size=new Size(360, 27);
+            label1.TabIndex=4;
+            label1.Text="Join a Lobby and click on \"Get Names\"...";
+            label1.TextAlign=ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
             // 
-            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.linkLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.DarkGray;
-            this.linkLabel1.Enabled = false;
-            this.linkLabel1.ForeColor = System.Drawing.Color.Cyan;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Aqua;
-            this.linkLabel1.Location = new System.Drawing.Point(27, 171);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(349, 21);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "PLAYER 1";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            linkLabel1.BackColor=Color.FromArgb(35, 35, 35);
+            linkLabel1.BorderStyle=BorderStyle.FixedSingle;
+            linkLabel1.DisabledLinkColor=Color.DarkGray;
+            linkLabel1.Enabled=false;
+            linkLabel1.ForeColor=Color.Cyan;
+            linkLabel1.LinkColor=Color.Aqua;
+            linkLabel1.Location=new Point(27, 171);
+            linkLabel1.Name="linkLabel1";
+            linkLabel1.Size=new Size(349, 21);
+            linkLabel1.TabIndex=5;
+            linkLabel1.TabStop=true;
+            linkLabel1.Text="PLAYER 1";
+            linkLabel1.TextAlign=ContentAlignment.MiddleCenter;
+            linkLabel1.LinkClicked+=LinkLabel_LinkClicked;
             // 
             // linkLabel2
             // 
-            this.linkLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.linkLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.linkLabel2.DisabledLinkColor = System.Drawing.Color.DarkGray;
-            this.linkLabel2.Enabled = false;
-            this.linkLabel2.ForeColor = System.Drawing.Color.Cyan;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Aqua;
-            this.linkLabel2.Location = new System.Drawing.Point(27, 203);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(349, 21);
-            this.linkLabel2.TabIndex = 6;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "PLAYER 2";
-            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            linkLabel2.BackColor=Color.FromArgb(35, 35, 35);
+            linkLabel2.BorderStyle=BorderStyle.FixedSingle;
+            linkLabel2.DisabledLinkColor=Color.DarkGray;
+            linkLabel2.Enabled=false;
+            linkLabel2.ForeColor=Color.Cyan;
+            linkLabel2.LinkColor=Color.Aqua;
+            linkLabel2.Location=new Point(27, 203);
+            linkLabel2.Name="linkLabel2";
+            linkLabel2.Size=new Size(349, 21);
+            linkLabel2.TabIndex=6;
+            linkLabel2.TabStop=true;
+            linkLabel2.Text="PLAYER 2";
+            linkLabel2.TextAlign=ContentAlignment.MiddleCenter;
+            linkLabel2.LinkClicked+=LinkLabel_LinkClicked;
             // 
             // linkLabel3
             // 
-            this.linkLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.linkLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.linkLabel3.DisabledLinkColor = System.Drawing.Color.DarkGray;
-            this.linkLabel3.Enabled = false;
-            this.linkLabel3.ForeColor = System.Drawing.Color.Cyan;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Aqua;
-            this.linkLabel3.Location = new System.Drawing.Point(27, 235);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(349, 21);
-            this.linkLabel3.TabIndex = 7;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "PLAYER 3";
-            this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            linkLabel3.BackColor=Color.FromArgb(35, 35, 35);
+            linkLabel3.BorderStyle=BorderStyle.FixedSingle;
+            linkLabel3.DisabledLinkColor=Color.DarkGray;
+            linkLabel3.Enabled=false;
+            linkLabel3.ForeColor=Color.Cyan;
+            linkLabel3.LinkColor=Color.Aqua;
+            linkLabel3.Location=new Point(27, 235);
+            linkLabel3.Name="linkLabel3";
+            linkLabel3.Size=new Size(349, 21);
+            linkLabel3.TabIndex=7;
+            linkLabel3.TabStop=true;
+            linkLabel3.Text="PLAYER 3";
+            linkLabel3.TextAlign=ContentAlignment.MiddleCenter;
+            linkLabel3.LinkClicked+=LinkLabel_LinkClicked;
             // 
             // linkLabel4
             // 
-            this.linkLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.linkLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.linkLabel4.DisabledLinkColor = System.Drawing.Color.DarkGray;
-            this.linkLabel4.Enabled = false;
-            this.linkLabel4.ForeColor = System.Drawing.Color.Cyan;
-            this.linkLabel4.LinkColor = System.Drawing.Color.Aqua;
-            this.linkLabel4.Location = new System.Drawing.Point(27, 267);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(349, 21);
-            this.linkLabel4.TabIndex = 8;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "PLAYER 4";
-            this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            linkLabel4.BackColor=Color.FromArgb(35, 35, 35);
+            linkLabel4.BorderStyle=BorderStyle.FixedSingle;
+            linkLabel4.DisabledLinkColor=Color.DarkGray;
+            linkLabel4.Enabled=false;
+            linkLabel4.ForeColor=Color.Cyan;
+            linkLabel4.LinkColor=Color.Aqua;
+            linkLabel4.Location=new Point(27, 267);
+            linkLabel4.Name="linkLabel4";
+            linkLabel4.Size=new Size(349, 21);
+            linkLabel4.TabIndex=8;
+            linkLabel4.TabStop=true;
+            linkLabel4.Text="PLAYER 4";
+            linkLabel4.TextAlign=ContentAlignment.MiddleCenter;
+            linkLabel4.LinkClicked+=LinkLabel_LinkClicked;
             // 
             // linkLabel5
             // 
-            this.linkLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.linkLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.linkLabel5.DisabledLinkColor = System.Drawing.Color.DarkGray;
-            this.linkLabel5.Enabled = false;
-            this.linkLabel5.ForeColor = System.Drawing.Color.Cyan;
-            this.linkLabel5.LinkColor = System.Drawing.Color.Aqua;
-            this.linkLabel5.Location = new System.Drawing.Point(27, 299);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(349, 21);
-            this.linkLabel5.TabIndex = 9;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "PLAYER 5";
-            this.linkLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
+            linkLabel5.BackColor=Color.FromArgb(35, 35, 35);
+            linkLabel5.BorderStyle=BorderStyle.FixedSingle;
+            linkLabel5.DisabledLinkColor=Color.DarkGray;
+            linkLabel5.Enabled=false;
+            linkLabel5.ForeColor=Color.Cyan;
+            linkLabel5.LinkColor=Color.Aqua;
+            linkLabel5.Location=new Point(27, 299);
+            linkLabel5.Name="linkLabel5";
+            linkLabel5.Size=new Size(349, 21);
+            linkLabel5.TabIndex=9;
+            linkLabel5.TabStop=true;
+            linkLabel5.Text="PLAYER 5";
+            linkLabel5.TextAlign=ContentAlignment.MiddleCenter;
+            linkLabel5.LinkClicked+=LinkLabel_LinkClicked;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(20, 344);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(169, 26);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "MINIMIZE";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            button4.BackColor=Color.FromArgb(30, 30, 30);
+            button4.FlatStyle=FlatStyle.Flat;
+            button4.ForeColor=Color.FromArgb(255, 128, 0);
+            button4.Location=new Point(20, 344);
+            button4.Name="button4";
+            button4.Size=new Size(169, 26);
+            button4.TabIndex=10;
+            button4.Text="MINIMIZE";
+            button4.UseVisualStyleBackColor=false;
+            button4.Click+=Button4_Click;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(212, 344);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(169, 26);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "CLOSE";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            button5.BackColor=Color.FromArgb(30, 30, 30);
+            button5.FlatStyle=FlatStyle.Flat;
+            button5.ForeColor=Color.Red;
+            button5.Location=new Point(212, 344);
+            button5.Name="button5";
+            button5.Size=new Size(169, 26);
+            button5.TabIndex=11;
+            button5.Text="CLOSE";
+            button5.UseVisualStyleBackColor=false;
+            button5.Click+=Button5_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(400, 384);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.linkLabel5);
-            this.Controls.Add(this.linkLabel4);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lobby Names - Baseult";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions=new SizeF(7F, 15F);
+            AutoScaleMode=AutoScaleMode.Font;
+            BackColor=Color.FromArgb(45, 45, 45);
+            BackgroundImage=(Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout=ImageLayout.None;
+            ClientSize=new Size(400, 384);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(linkLabel5);
+            Controls.Add(linkLabel4);
+            Controls.Add(linkLabel3);
+            Controls.Add(linkLabel2);
+            Controls.Add(linkLabel1);
+            Controls.Add(label1);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            FormBorderStyle=FormBorderStyle.None;
+            Name="Form1";
+            StartPosition=FormStartPosition.CenterScreen;
+            Text="Lobby Names - Baseult";
+            Load+=Form1_Load;
+            MouseDown+=Form1_MouseDown;
+            ResumeLayout(false);
         }
 
         #endregion
