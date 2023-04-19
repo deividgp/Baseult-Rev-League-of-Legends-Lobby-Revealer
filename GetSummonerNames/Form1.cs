@@ -236,7 +236,7 @@ namespace GetSummonerNames
         {
             for (int i = 0; i < LinkLabels.Count; i++)
             {
-                LinkLabels[i].Text = "PLAYER " + i+1;
+                LinkLabels[i].Text = "PLAYER " + (i+1);
                 LinkLabels[i].Enabled = false;
             }
         }
